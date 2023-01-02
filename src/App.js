@@ -9,6 +9,7 @@ import State from './components/3-3.Hook/State';
 import Reducer from './components/3-3.Hook/Reducer';
 import Memo from './components/3-8.Memorization/Memo';
 import Movie from './components/Movie';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,7 +22,7 @@ import Detail from './routes/Detail';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />         
         <Route path="/movie/:id" element={<Detail />} />           
